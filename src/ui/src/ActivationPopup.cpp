@@ -38,7 +38,7 @@ ActivationPopup::ActivationPopup() : m_impl(std::make_unique<Impl>()) {};
 ActivationPopup::~ActivationPopup() {};
 
 bool ActivationPopup::init() {
-    auto gen = utils::random::generateString;
+    auto gen = utils::random::generateString;  // sry i couldnt think of any other way
     m_impl->code = fmt::format("{}-{}-{}-{}-{}", gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars));
 
     if (!Popup::init({275.f, 140.f})) return false;

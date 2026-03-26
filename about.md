@@ -16,20 +16,22 @@ Yes! You can <cy>actually *"activate"* your game</c> and make the overlay disapp
 > ![✳️](frame:collaborationIcon_001.png) <cg>*gd pirata real*</c>
 
 ### What Our Customers Said
-"*So good you dont even need massgrave to activate 12/10*"
-- [DominoKiddoo](user:13948595)
+Some sentences of choice from some people.
 
-"*i have no mouth and i must scream*"
-- [Uproxide](user:25397826)
+> "*So good you dont even need massgrave to activate 12/10*"
+> - [DominoKiddoo](user:13948595)
 
-"*i installed this mod and lost 110k$ from my bank account 100% recommended*"
-- [alk1m123](user:11535118)
+> "*i have no mouth and i must scream*"
+> - [Uproxide](user:25397826)
 
-"*idk what it does but i give it a thumbs up* ![👍](frame:GJ_likesIcon_001.png?scale=0.5)"
-- [Cvolton](user:761691)
+> "*i installed this mod and lost 110k$ from my bank account 100% recommended*"
+> - [alk1m123](user:11535118)
 
-"*give me a quote that says bus*"
-- [August](user:21207551)
+> "*idk what it does but i give it a thumbs up* ![👍](frame:GJ_likesIcon_001.png?scale=0.5)"
+> - [Cvolton](user:761691)
+
+> "*give me a quote that says bus*"
+> - [August](user:21207551)
 
 ---
 

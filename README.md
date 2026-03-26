@@ -21,20 +21,22 @@ Yes! You can actually *"activate"* your game and make the overlay disappear for 
 > *gd pirata real*
 
 ### What Our Customers Said
-"*So good you dont even need massgrave to activate 12/10*"
-- [DominoKiddoo](https://www.github.com/DominoKiddoo/)
+Some sentences of choice from some people.
 
-"*i have no mouth and i must scream*"
-- [Uproxide](https://www.github.com/Uproxide/)
+> "*So good you dont even need massgrave to activate 12/10*"
+> - [DominoKiddoo](https://www.github.com/DominoKiddoo/)
 
-"*i installed this mod and lost 110k$ from my bank account 100% recommended*"
-- [alk1m123](https://www.github.com/altalk23/)
+> "*i have no mouth and i must scream*"
+> - [Uproxide](https://www.github.com/Uproxide/)
 
-"*idk what it does but i give it a thumbs up* 👍"
-- [Cvolton](https://www.github.com/Cvolton/)
+> "*i installed this mod and lost 110k$ from my bank account 100% recommended*"
+> - [alk1m123](https://www.github.com/altalk23/)
 
-"*give me a quote that says bus*"
-- [August](https://www.github.com/coopeeo/)
+> "*idk what it does but i give it a thumbs up* 👍"
+> - [Cvolton](https://www.github.com/Cvolton/)
+
+> "*give me a quote that says bus*"
+> - [August](https://www.github.com/coopeeo/)
 
 ---
 
