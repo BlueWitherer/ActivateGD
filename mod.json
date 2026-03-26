@@ -1,0 +1,31 @@
+{
+    "geode": "5.0.0",
+    "gd": {
+        "win": "2.2081",
+        "android": "2.2081",
+        "mac": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "cheeseworks.activategd",
+    "name": "Activate GD!",
+    "version": "1.0.0-beta.1",
+    "developers": [
+        "Cheeseworks"
+    ],
+    "description": "Go to settings and activate Geometry Dash.",
+    "links": {
+        "source": "https://github.com/BlueWitherer/ActivateGD",
+        "homepage": "https://www.cheeseworks.gay/",
+        "community": "https://www.dsc.gg/cheeseworks"
+    },
+    "tags": [
+        "joke",
+        "offline",
+        "interface",
+        "universal"
+    ],
+    "dependencies": {
+        "geode.node-ids": ">=1.22.0"
+    },
+    "early-load": false
+}
