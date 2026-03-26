@@ -10,7 +10,7 @@ Go to settings and activate Geometry Dash.
 ---
 
 ## About
-A silly lil' joke mod that just adds an "*Activate Windows*"-like overlay to your game.
+A cosmetic, silly lil' joke mod that just adds an "*Activate Windows*"-like overlay to your game.
 
 ---
 
@@ -19,6 +19,16 @@ Yes! You can actually *"activate"* your game and make the overlay disappear for 
 
 > [!TIP]
 > *gd pirata real*
+
+### What Our Customers Said
+*Yes, I promise you it is 100% safe and not a virus. There are zero red flags. It's safe. In fact, it's so reliable, that Microsoft has allegedly*...[Read More](https://patreon.cheeseworks.gay/)
+###### - [DominoKiddoo](https://www.github.com/DominoKiddoo/)
+
+*i have no mouth and i must scream*
+###### - [Uproxide](https://www.github.com/Uproxide/)
+
+*i installed this mod and lost 110k$ from my bank account 100% recommended*
+###### - [alk1m123](https://www.github.com/altalk23/)
 
 ---
 
