@@ -21,14 +21,20 @@ Yes! You can actually *"activate"* your game and make the overlay disappear for 
 > *gd pirata real*
 
 ### What Our Customers Said
-*Yes, I promise you it is 100% safe and not a virus. There are zero red flags. It's safe. In fact, it's so reliable, that Microsoft has allegedly*...[Read More](https://patreon.cheeseworks.gay/)
-###### - [DominoKiddoo](https://www.github.com/DominoKiddoo/)
+"*So good you dont even need massgrave to activate 12/10*"
+- [DominoKiddoo](https://www.github.com/DominoKiddoo/)
 
-*i have no mouth and i must scream*
-###### - [Uproxide](https://www.github.com/Uproxide/)
+"*i have no mouth and i must scream*"
+- [Uproxide](https://www.github.com/Uproxide/)
 
-*i installed this mod and lost 110k$ from my bank account 100% recommended*
-###### - [alk1m123](https://www.github.com/altalk23/)
+"*i installed this mod and lost 110k$ from my bank account 100% recommended*"
+- [alk1m123](https://www.github.com/altalk23/)
+
+"*idk what it does but i give it a thumbs up* 👍"
+- [Cvolton](https://www.github.com/Cvolton/)
+
+"*give me a quote that says bus*"
+- [August](https://www.github.com/coopeeo/)
 
 ---
 
@@ -38,9 +44,9 @@ Yes! You can actually *"activate"* your game and make the overlay disappear for 
 ---
 
 ### Changelog
-###### What's new?!
+What's new?!
 **[📜 View the latest updates and patches](./changelog.md)**
 
 ### Issues
-###### What's wrong?!
+What's wrong?!
 **[⚠️ Report a problem with the mod](../../issues/)**

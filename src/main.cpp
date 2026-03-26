@@ -34,10 +34,18 @@ class $modify(ActivateMoreOptionsLayer, MoreOptionsLayer) {
                     });
                 btn->setID("activate-btn"_spr);
                 btn->setScale(0.875);
-                btn->setPosition({m_mainLayer->getScaledContentWidth() - 110.f, 47.5f});
-                btn->setTouchPriority(-510);
+                btn->setPosition({(m_mainLayer->getScaledContentWidth() / 2.f) + 172.5f, 47.5f});
+                btn->setTouchPriority(-510);  // i do this a few times, touch in this layer is so fucked
 
                 m_mainLayer->addChild(btn, 9);
+
+                auto label = CCLabelBMFont::create("Activate", "bigFont.fnt");
+                label->setID("activate-label"_spr);
+                label->setScale(0.3f);
+                label->setAnchorPoint({0.5, 0.5});
+                label->setPosition({btn->getPositionX(), btn->getPositionY() + (btn->getScaledContentHeight() * 0.625f)});
+
+                m_mainLayer->addChild(label, 9);
             };
         };
 
