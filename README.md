@@ -46,9 +46,9 @@ Some sentences of choice from some people.
 ---
 
 ### Changelog
-What's new?!
+###### What's new?!
 **[📜 View the latest updates and patches](./changelog.md)**
 
 ### Issues
-What's wrong?!
+###### What's wrong?!
 **[⚠️ Report a problem with the mod](../../issues/)**
