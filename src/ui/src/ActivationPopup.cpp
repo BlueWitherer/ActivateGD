@@ -31,7 +31,7 @@ class ActivationPopup::Impl final {
 public:
     std::string code;
 
-    geode::TextInput* codeInput = nullptr;
+    TextInput* codeInput = nullptr;
 };
 
 ActivationPopup::ActivationPopup() : m_impl(std::make_unique<Impl>()) {};

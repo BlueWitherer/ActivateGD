@@ -11,6 +11,7 @@ using namespace geode::prelude;
 
 $on_game(Loaded) {
     if (auto overlay = OverlayManager::get()) {
+        // mfw i nullcheck static memory :D
         if (auto activate = ActivateOverlay::get()) overlay->addChild(activate);
     };
 };
