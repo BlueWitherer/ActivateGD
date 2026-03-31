@@ -118,7 +118,7 @@ bool ActivationPopup::init() {
 
                 createQuickPopup(
                     "GD Activated",
-                    "Your installation of Geometry Dash has been <cg>activated</c>.\n\nWhat for..?",
+                    "Your installation of Geometry Dash has been <cg>activated</c>.\n\nWhat for...?",
                     "OK",
                     nullptr,
                     [this, btn](auto, auto) {
