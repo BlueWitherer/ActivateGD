@@ -31,16 +31,16 @@ bool ActivateOverlay::init() {
     m_impl->activate = CCLabelBMFont::create("Activate GD", "bigFont.fnt");
     m_impl->activate->setID("activate-title");
     m_impl->activate->setAnchorPoint({0, 0.5});
-    m_impl->activate->setPosition({m_impl->size.width - 250.f, 60.f});
+    m_impl->activate->setPosition({m_impl->size.width - 200.f, 60.f});
     m_impl->activate->setScale(0.625f);
     m_impl->activate->setOpacity(125);
 
     addChild(m_impl->activate);
 
-    m_impl->settings = CCLabelBMFont::create("Go to settings and activate Geometry Dash.", "chatFont.fnt");
+    m_impl->settings = CCLabelBMFont::create("Go to settings to activate Geometry Dash.", "chatFont.fnt");
     m_impl->settings->setID("activate-text");
     m_impl->settings->setAnchorPoint({0, 0.5});
-    m_impl->settings->setPosition({m_impl->size.width - 250.f, m_impl->activate->getPositionY() - 20.f});
+    m_impl->settings->setPosition({m_impl->size.width - 200.f, m_impl->activate->getPositionY() - 20.f});
     m_impl->settings->setScale(0.625f);
     m_impl->settings->setOpacity(125);
 

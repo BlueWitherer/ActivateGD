@@ -41,7 +41,7 @@ bool ActivationPopup::init() {
     auto gen = utils::random::generateString;  // sry i couldnt think of any other way
     m_impl->code = fmt::format("{}-{}-{}-{}-{}", gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars));
 
-    if (!Popup::init({275.f, 140.f})) return false;
+    if (!Popup::init({280.f, 140.f})) return false;
 
     setID("activation"_spr);
     setTitle("Activate your GD!");

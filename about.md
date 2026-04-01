@@ -1,5 +1,5 @@
 # ![🔒](frame:GJ_lock_001.png?scale=0.75) Activate GD!
-**Go to settings and activate Geometry Dash.**
+**Go to settings to activate Geometry Dash.**
 
 *by [Cheeseworks](user:6408873)!*
 
@@ -11,12 +11,12 @@ A cosmetic, silly lil' joke mod that just adds an "*Activate Windows*"-like over
 ---
 
 ### Activating
-Yes! You can <cy>actually *"activate"* your game</c> and make the overlay disappear for your current session by going to your <cg>game settings</c> and <cy>pressing the unlock button</c> to start the activation process. Although, <cr>why would you even want that</c>..?
+**Yes!** You can <cy>actually *"activate"* your game</c> and make the overlay disappear for your current session by going to your <cg>game settings</c> and <cy>pressing the unlock button</c> to start the activation process. Although, <cr>why would you even want that</c>..?
 
 > ![✳️](frame:collaborationIcon_001.png) <cg>*gd pirata real*</c>
 
 ### What Our Customers Said
-Some sentences of choice from some people.
+Some sentences of choice from some people that were approached about this mod.
 
 > "*So good you dont even need massgrave to activate 12/10*"
 > - [DominoKiddoo](user:13948595)

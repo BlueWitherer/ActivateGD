@@ -8,11 +8,11 @@
     },
     "id": "cheeseworks.activategd",
     "name": "Activate GD!",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "developers": [
         "Cheeseworks"
     ],
-    "description": "Go to settings and activate Geometry Dash.",
+    "description": "Go to settings to activate Geometry Dash.",
     "links": {
         "source": "https://github.com/BlueWitherer/ActivateGD",
         "homepage": "https://www.cheeseworks.gay/",
