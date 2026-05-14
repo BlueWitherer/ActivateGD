@@ -7,13 +7,12 @@ namespace ids {
 
 class ActivateOverlay final : public cocos2d::CCNode {
 private:
-    class Impl;
-    std::unique_ptr<Impl> m_impl;
+    cocos2d::CCSize const m_size = cocos2d::CCDirector::sharedDirector()->getWinSize();
+
+    cocos2d::CCLabelBMFont* m_activate = nullptr;
+    cocos2d::CCLabelBMFont* m_settings = nullptr;
 
 protected:
-    ActivateOverlay();
-    ~ActivateOverlay();
-
     bool init() override;
 
     static ActivateOverlay* create();

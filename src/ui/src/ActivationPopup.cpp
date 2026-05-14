@@ -27,42 +27,32 @@ static std::unordered_map<unsigned int, std::string_view> const s_numToLetter = 
 
 static constexpr auto s_allowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-class ActivationPopup::Impl final {
-public:
-    std::string code;
-
-    TextInput* codeInput = nullptr;
-};
-
-ActivationPopup::ActivationPopup() : m_impl(std::make_unique<Impl>()) {};
-ActivationPopup::~ActivationPopup() {};
-
 bool ActivationPopup::init() {
     auto gen = utils::random::generateString;  // sry i couldnt think of any other way
-    m_impl->code = fmt::format("{}-{}-{}-{}-{}", gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars));
+    m_code = fmt::format("{}-{}-{}-{}-{}", gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars), gen(5, s_allowedChars));
 
     if (!Popup::init({280.f, 140.f})) return false;
 
     setID(ids::activator);
     setTitle("Activate your GD!");
 
-    m_impl->codeInput = TextInput::create(250.f, "Activation code...");
-    m_impl->codeInput->setID("code-input"_spr);
-    m_impl->codeInput->setPosition(m_mainLayer->getScaledContentSize() / 2.f);
-    m_impl->codeInput->setFilter("0123456789-");
-    m_impl->codeInput->setMaxCharCount(29);
+    m_codeInput = TextInput::create(250.f, "Activation code...");
+    m_codeInput->setID("code-input"_spr);
+    m_codeInput->setPosition(m_mainLayer->getScaledContentSize() / 2.f);
+    m_codeInput->setFilter("0123456789-");
+    m_codeInput->setMaxCharCount(29);
 
     auto inputLabel = CCLabelBMFont::create("Type in your activation key", "bigFont.fnt");
     inputLabel->setID("code-input-label"_spr);
     inputLabel->setAlignment(kCCTextAlignmentCenter);
     inputLabel->setAnchorPoint({0.5, 0.5});
-    inputLabel->setPosition({m_impl->codeInput->getPositionX(), m_impl->codeInput->getPositionY() + 25.f});
+    inputLabel->setPosition({m_codeInput->getPositionX(), m_codeInput->getPositionY() + 25.f});
     inputLabel->setScale(0.375f);
 
-    m_mainLayer->addChild(m_impl->codeInput, 9);
+    m_mainLayer->addChild(m_codeInput, 9);
     m_mainLayer->addChild(inputLabel, 1);
 
-    auto codeCopyBtnSpr = CCLabelBMFont::create(m_impl->code.c_str(), "chatFont.fnt");
+    auto codeCopyBtnSpr = CCLabelBMFont::create(m_code.c_str(), "chatFont.fnt");
     codeCopyBtnSpr->setAnchorPoint({0.5, 0.5});
     codeCopyBtnSpr->setAlignment(kCCTextAlignmentCenter);
     codeCopyBtnSpr->setColor({225, 225, 125});
@@ -70,11 +60,11 @@ bool ActivationPopup::init() {
     auto codeCopyBtn = Button::createWithNode(
         codeCopyBtnSpr,
         [this](auto) {
-            utils::clipboard::write(m_impl->code);
+            utils::clipboard::write(m_code);
             if (auto notif = Notification::create("Copied to clipboard", NotificationIcon::Info, 1.25f)) notif->show();
         });
     codeCopyBtn->setID("copy-code-btn"_spr);
-    codeCopyBtn->setPosition({m_impl->codeInput->getPositionX(), m_impl->codeInput->getPositionY() - 30.f});
+    codeCopyBtn->setPosition({m_codeInput->getPositionX(), m_codeInput->getPositionY() - 30.f});
     codeCopyBtn->setScale(0.875f);
 
     m_mainLayer->addChild(codeCopyBtn, 1);
@@ -83,7 +73,7 @@ bool ActivationPopup::init() {
     codeHintLabel->setID("code-hint-label"_spr);
     codeHintLabel->setAlignment(kCCTextAlignmentCenter);
     codeHintLabel->setAnchorPoint({0.5, 0.5});
-    codeHintLabel->setPosition({m_impl->codeInput->getPositionX(), m_impl->codeInput->getPositionY() - 45.f});
+    codeHintLabel->setPosition({m_codeInput->getPositionX(), m_codeInput->getPositionY() - 45.f});
     codeHintLabel->setScale(0.5f);
 
     m_mainLayer->addChild(codeHintLabel);
@@ -91,13 +81,13 @@ bool ActivationPopup::init() {
     auto infoBtn = Button::createWithSpriteFrameName(
         "GJ_infoIcon_001.png",
         [this](auto) {
-            if (auto popup = FLAlertLayer::create(
-                    this,
-                    "Help",
-                    "To <cy>activate GD</c>, you must type <cg>the provided auto-generated code</c> into the text field with each letter <cy>substituted by its corresponding number on a phone keypad</c>.\n\nFor example, \"<cl>GEODE</c>\" should be written instead as <cj>43633</c>.",
-                    "OK",
-                    nullptr,
-                    300.f)) popup->show();
+            createQuickPopup(
+                "Help",
+                "To <cy>activate GD</c>, you must type <cg>the provided auto-generated code</c> into the text field with each letter <cy>substituted by its corresponding number on a phone keypad</c>.\n\nFor example, \"<cl>GEODE</c>\" should be written instead as <cj>43633</c>.",
+                "OK",
+                nullptr,
+                300.f,
+                nullptr);
         });
     infoBtn->setID("info-btn");
     infoBtn->setScale(0.75f);
@@ -142,9 +132,9 @@ bool ActivationPopup::init() {
 };
 
 Result<> ActivationPopup::validate() {
-    if (m_impl->codeInput) {
-        auto const code = str::filter(m_impl->code, s_allowedChars);
-        auto const input = str::filter(m_impl->codeInput->getString(), "0123456789");
+    if (m_codeInput) {
+        auto const code = str::filter(m_code, s_allowedChars);
+        auto const input = str::filter(m_codeInput->getString(), "0123456789");
 
         if (input.size() <= 0) return Err("Code is missing");
         if (code.size() != input.size()) return Err("Code format doesn't match");

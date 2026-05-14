@@ -6,42 +6,31 @@
 
 using namespace geode::prelude;
 
-class ActivateOverlay::Impl final {
-public:
-    CCSize const size = CCDirector::sharedDirector()->getWinSize();
-
-    CCLabelBMFont* activate = nullptr;
-    CCLabelBMFont* settings = nullptr;
-};
-
-ActivateOverlay::ActivateOverlay() : m_impl(std::make_unique<Impl>()) {};
-ActivateOverlay::~ActivateOverlay() {};
-
 bool ActivateOverlay::init() {
     if (!CCNode::init()) return false;
 
     setID(ids::overlay);
-    setContentSize(m_impl->size);
+    setContentSize(m_size);
     setAnchorPoint({0.5, 0.5});
-    setPosition(m_impl->size / 2.f);
+    setPosition(m_size / 2.f);
 
-    m_impl->activate = CCLabelBMFont::create("Activate GD", "bigFont.fnt");
-    m_impl->activate->setID("activate-title");
-    m_impl->activate->setAnchorPoint({0, 0.5});
-    m_impl->activate->setPosition({m_impl->size.width - 200.f, 60.f});
-    m_impl->activate->setScale(0.625f);
-    m_impl->activate->setOpacity(125);
+    m_activate = CCLabelBMFont::create("Activate GD", "bigFont.fnt");
+    m_activate->setID("activate-title");
+    m_activate->setAnchorPoint({0, 0.5});
+    m_activate->setPosition({m_size.width - 200.f, 60.f});
+    m_activate->setScale(0.625f);
+    m_activate->setOpacity(125);
 
-    addChild(m_impl->activate);
+    addChild(m_activate);
 
-    m_impl->settings = CCLabelBMFont::create("Go to settings to activate Geometry Dash.", "chatFont.fnt");
-    m_impl->settings->setID("activate-text");
-    m_impl->settings->setAnchorPoint({0, 0.5});
-    m_impl->settings->setPosition({m_impl->size.width - 200.f, m_impl->activate->getPositionY() - 20.f});
-    m_impl->settings->setScale(0.625f);
-    m_impl->settings->setOpacity(125);
+    m_settings = CCLabelBMFont::create("Go to settings to activate Geometry Dash.", "chatFont.fnt");
+    m_settings->setID("activate-text");
+    m_settings->setAnchorPoint({0, 0.5});
+    m_settings->setPosition({m_size.width - 200.f, m_activate->getPositionY() - 20.f});
+    m_settings->setScale(0.625f);
+    m_settings->setOpacity(125);
 
-    addChild(m_impl->settings);
+    addChild(m_settings);
 
     return true;
 };

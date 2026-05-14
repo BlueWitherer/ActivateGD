@@ -17,9 +17,9 @@ using namespace horrible;
 static std::vector<std::weak_ptr<Hook>> s_activatorHooks;  // Array of registered hooks for activator button
 
 $on_game(Loaded) {
-    if (auto overlay = OverlayManager::get()) {
+    if (auto om = OverlayManager::get()) {
         // mfw i nullcheck static mem >:3
-        if (auto activate = ActivateOverlay::get()) overlay->addChild(activate);
+        if (auto overlay = ActivateOverlay::get()) om->addChild(overlay);
     };
 
     if (Loader::get()->isModLoaded("cubicstudios.horriblemenu")) {

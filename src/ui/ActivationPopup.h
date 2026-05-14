@@ -1,16 +1,14 @@
 #include <Geode/Geode.hpp>
 
-class ActivationPopup final : public geode::Popup, private FLAlertLayerProtocol {
+class ActivationPopup final : public geode::Popup {
 private:
-    class Impl;
-    std::unique_ptr<Impl> m_impl;
+    std::string m_code;
+
+    geode::TextInput* m_codeInput = nullptr;
 
     geode::Result<> validate();
 
 protected:
-    ActivationPopup();
-    ~ActivationPopup();
-
     bool init();
 
 public:
