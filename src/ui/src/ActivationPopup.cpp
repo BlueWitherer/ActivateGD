@@ -43,7 +43,7 @@ bool ActivationPopup::init() {
 
     if (!Popup::init({280.f, 140.f})) return false;
 
-    setID("activation"_spr);
+    setID(ids::activator);
     setTitle("Activate your GD!");
 
     m_impl->codeInput = TextInput::create(250.f, "Activation code...");

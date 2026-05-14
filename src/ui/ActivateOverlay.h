@@ -1,5 +1,10 @@
 #include <Geode/Geode.hpp>
 
+namespace ids {
+    inline constexpr auto overlay = "overlay"_spr;
+    inline constexpr auto activator = "activator"_spr;
+};
+
 class ActivateOverlay final : public cocos2d::CCNode {
 private:
     class Impl;
@@ -11,7 +16,8 @@ protected:
 
     bool init() override;
 
-public:
     static ActivateOverlay* create();
+
+public:
     static ActivateOverlay* get();
 };

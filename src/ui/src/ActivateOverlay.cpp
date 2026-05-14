@@ -1,5 +1,7 @@
 #include "../ActivateOverlay.h"
 
+#include <horrible/OptionalAPI.hpp>
+
 #include <Geode/Geode.hpp>
 
 using namespace geode::prelude;
@@ -10,10 +12,6 @@ public:
 
     CCLabelBMFont* activate = nullptr;
     CCLabelBMFont* settings = nullptr;
-
-    bool forceShow = Mod::get()->getSettingValue<bool>("force-show");
-
-    bool isActivated = Mod::get()->getSavedValue<bool>("activated", false);
 };
 
 ActivateOverlay::ActivateOverlay() : m_impl(std::make_unique<Impl>()) {};
@@ -22,11 +20,10 @@ ActivateOverlay::~ActivateOverlay() {};
 bool ActivateOverlay::init() {
     if (!CCNode::init()) return false;
 
-    setID("overlay"_spr);
+    setID(ids::overlay);
     setContentSize(m_impl->size);
     setAnchorPoint({0.5, 0.5});
     setPosition(m_impl->size / 2.f);
-    setVisible(!m_impl->isActivated);
 
     m_impl->activate = CCLabelBMFont::create("Activate GD", "bigFont.fnt");
     m_impl->activate->setID("activate-title");

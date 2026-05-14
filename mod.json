@@ -8,7 +8,7 @@
     },
     "id": "cheeseworks.activategd",
     "name": "Activate GD!",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "developers": [
         "Cheeseworks"
     ],
@@ -25,7 +25,11 @@
         "universal"
     ],
     "dependencies": {
-        "geode.node-ids": ">=1.22.0"
+        "geode.node-ids": ">=1.22.0",
+        "cubicstudios.horriblemenu": {
+            "version": ">=1.0.0",
+            "required": false
+        }
     },
     "early-load": false
 }

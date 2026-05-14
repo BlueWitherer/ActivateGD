@@ -38,6 +38,9 @@ Some sentences of choice from some people that were approached about this mod.
 > "*give me a quote that says bus*"
 > - [August](https://www.github.com/coopeeo/)
 
+### Live Toggling
+You can disable both the activation message overlay and activation button during gameplay if you have [Horrible Menu](https://geode-sdk.org/mods/cubicstudios.horriblemenu) installed! Find Activate GD's options in their menu.
+
 ---
 
 ![preview](previews/preview-1.png)

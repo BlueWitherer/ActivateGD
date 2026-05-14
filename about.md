@@ -33,6 +33,11 @@ Some sentences of choice from some people that were approached about this mod.
 > "*give me a quote that says bus*"
 > - [August](user:21207551)
 
+### Live Toggling
+You can disable both the activation message overlay and activation button during gameplay if you have [Horrible Menu](mod:cubicstudios.horriblemenu) installed! Find Activate GD's options in their menu.
+
+<mod:cubicstudios.horriblemenu>
+
 ---
 
 ![🗨️](frame:gj_discordIcon_001.png?scale=0.375) **If you need help, join my [support Discord server](https://www.dsc.gg/cheeseworks) and ask! :)**
