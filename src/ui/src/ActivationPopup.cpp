@@ -14,7 +14,7 @@ using namespace geode::prelude;
 // ez string
 namespace str = utils::string;
 
-static std::unordered_map<unsigned int, std::string_view> const s_numToLetter = {
+static std::unordered_map<unsigned int, std::string_view> const g_numToLetter = {
     {2, "ABC"},
     {3, "DEF"},
     {4, "GHI"},
@@ -154,8 +154,8 @@ Result<> ActivationPopup::validate() {
 
                              log::trace("comparing int {} with char {}", digit, letter);
 
-                             auto it = s_numToLetter.find(digit);
-                             if (it == s_numToLetter.end()) return false;
+                             auto it = g_numToLetter.find(digit);
+                             if (it == g_numToLetter.end()) return false;
 
                              return it->second.find(letter) != std::string_view::npos;
                          });

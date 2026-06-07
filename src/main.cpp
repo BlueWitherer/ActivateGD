@@ -14,7 +14,7 @@
 using namespace geode::prelude;
 using namespace horrible;
 
-static std::vector<std::weak_ptr<Hook>> s_activatorHooks;  // Array of registered hooks for activator button
+static std::vector<std::weak_ptr<Hook>> g_activatorHooks;  // Array of registered hooks for activator button
 
 $on_game(Loaded) {
     if (auto om = OverlayManager::get()) {
@@ -32,7 +32,7 @@ $on_game(Loaded) {
         horrible::listenForHorribleOptionChanges(
             ids::activator,
             [](HorribleOptionSave data) {
-                for (auto const& hook : s_activatorHooks) {
+                for (auto const& hook : g_activatorHooks) {
                     if (auto h = hook.lock()) (void)h->toggle(data.enabled);
                 };
             });
@@ -70,7 +70,7 @@ class $modify(ActivateMoreOptionsLayer, MoreOptionsLayer) {
                 hook->setAutoEnable(enable);
                 (void)hook->toggle(enable);
 
-                s_activatorHooks.push_back(hook);
+                g_activatorHooks.push_back(hook);
             };
         };
     };
