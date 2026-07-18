@@ -1,7 +1,7 @@
 #include <Geode/Geode.hpp>
 
-#define AGD_HORRIBLE_ID_OVERLAY "overlay"_spr;
-#define AGD_HORRIBLE_ID_ACTIVATOR "activator"_spr;
+#define AGD_HORRIBLE_ID_OVERLAY "overlay"_spr
+#define AGD_HORRIBLE_ID_ACTIVATOR "activator"_spr
 
 namespace ids {
     inline constexpr auto overlay = AGD_HORRIBLE_ID_OVERLAY;

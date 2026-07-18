@@ -37,7 +37,7 @@ $on_game(Loaded) {
                 };
             });
 
-#define AGD_HORRIBLE_CATEGORY "Activate GD";
+#define AGD_HORRIBLE_CATEGORY "Activate GD"
 
         auto const optionOverlay = OptionV2(
             AGD_HORRIBLE_ID_OVERLAY,
