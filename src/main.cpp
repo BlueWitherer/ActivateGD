@@ -37,21 +37,21 @@ $on_game(Loaded) {
                 };
             });
 
-        constexpr auto category = "Activate GD";
+#define AGD_HORRIBLE_CATEGORY = "Activate GD";
 
         auto const optionOverlay = OptionV2(
-            ids::overlay,
+            AGD_HORRIBLE_ID_OVERLAY,
             "Activation Message",
             "Enable the 'Activate GD' overlay for your entire game.",
-            category,
+            AGD_HORRIBLE_CATEGORY,
             SillyTier::Medium,
             true);
 
         auto const optionActivator = OptionV2(
-            ids::activator,
+            AGD_HORRIBLE_ID_ACTIVATOR,
             "Activator",
             "Enable the button in game settings to actually 'activate' Geometry Dash.\n<co>This will only appear if the overlay is also visible!</c>",
-            category,
+            AGD_HORRIBLE_CATEGORY,
             SillyTier::Low,
             true);
 

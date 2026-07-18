@@ -1,5 +1,6 @@
 # v1.1.1 
-- Fixed cheat marker appearing for *Activate GD* options with [Horrible Menu](https://geode-sdk.org/mods/cubicstudios.horriblemenu) integration
+- Fixed a cheat marker quirk with [Horrible Menu](https://geode-sdk.org/mods/cubicstudios.horriblemenu) integration
+- Internal tweaks
 
 # v1.1.0 
 - Added optional integration with [Horrible Menu](https://geode-sdk.org/mods/cubicstudios.horriblemenu)

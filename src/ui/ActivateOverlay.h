@@ -1,8 +1,11 @@
 #include <Geode/Geode.hpp>
 
+#define AGD_HORRIBLE_ID_OVERLAY "overlay"_spr;
+#define AGD_HORRIBLE_ID_ACTIVATOR "activator"_spr;
+
 namespace ids {
-    inline constexpr auto overlay = "overlay"_spr;
-    inline constexpr auto activator = "activator"_spr;
+    inline constexpr auto overlay = AGD_HORRIBLE_ID_OVERLAY;
+    inline constexpr auto activator = AGD_HORRIBLE_ID_ACTIVATOR;
 };
 
 class ActivateOverlay final : public cocos2d::CCNode {
