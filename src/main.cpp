@@ -23,20 +23,6 @@ $on_game(Loaded) {
     };
 
     if (Loader::get()->isModLoaded("cubicstudios.horriblemenu")) {
-        horrible::listenForHorribleOptionChanges(
-            ids::overlay,
-            [](HorribleOptionSave data) {
-                if (auto activate = ActivateOverlay::get()) activate->setVisible(data.enabled);
-            });
-
-        horrible::listenForHorribleOptionChanges(
-            ids::activator,
-            [](HorribleOptionSave data) {
-                for (auto const& hook : g_activatorHooks) {
-                    if (auto h = hook.lock()) (void)h->toggle(data.enabled);
-                };
-            });
-
 #define AGD_HORRIBLE_CATEGORY "Activate GD"
 
         auto const optionOverlay = OptionV2(
@@ -54,6 +40,20 @@ $on_game(Loaded) {
             AGD_HORRIBLE_CATEGORY,
             SillyTier::Low,
             true);
+
+        horrible::listenForHorribleOptionChanges(
+            ids::overlay,
+            [](HorribleOptionSave data) {
+                if (auto activate = ActivateOverlay::get()) activate->setVisible(data.enabled);
+            });
+
+        horrible::listenForHorribleOptionChanges(
+            ids::activator,
+            [](HorribleOptionSave data) {
+                for (auto const& hook : g_activatorHooks) {
+                    if (auto h = hook.lock()) (void)h->toggle(data.enabled);
+                };
+            });
 
         OptionManagerV2::registerOption(optionOverlay);
         OptionManagerV2::registerOption(optionActivator);
